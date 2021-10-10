@@ -1,0 +1,14 @@
+.nav {
+  height: 50px;
+  padding: 30px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2rem;
+
+  h1 {
+    margin-left: 1rem;
+  }
+}
