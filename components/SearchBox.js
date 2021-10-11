@@ -1,5 +1,7 @@
 import Router from "next/router";
 import { useState } from "react";
+import { getUser } from "../utils/userFinder";
+import { toast } from "react-toastify";
 
 const SearchBox = () => {
   const [username, setUsername] = useState("");
@@ -8,8 +10,15 @@ const SearchBox = () => {
     setUsername(username);
   };
 
-  const submitHandler = () => {
-    console.log(username);
+  const submitHandler = async () => {
+    try {
+      const { profile } = await getUser(username);
+      if (profile) {
+        Router.push(`/profile/${username}`);
+      }
+    } catch {
+      toast.error(`This profile does not exist!`);
+    }
   };
 
   return (

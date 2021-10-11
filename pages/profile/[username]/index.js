@@ -8,19 +8,11 @@ import Profile from "../../../components/Profile";
 const User = ({ profile, repos, message }) => {
   const router = useRouter();
   const { username } = router.query;
-
-  const userRenderer = () => {
-    if (message) {
-      return <Error message={message} />;
-    } else {
-      return <Profile profile={profile} repos={repos} />;
-    }
-  };
-
+  
   return (
     <>
       <Meta title={username} />
-      {userRenderer()}
+      <Profile profile={profile} repos={repos} />
     </>
   );
 };
