@@ -3,4 +3,7 @@
 
 // components
 @import "./components/SearchBox", "./components/Nav", "./components/Layout",
-  "./components/Error", "./components/Profile";
+  "./components/Error", "./components/Profile", "./components/Pagination";
+
+// pages
+@import "./pages/404";
