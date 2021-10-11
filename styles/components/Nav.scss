@@ -1,0 +1,39 @@
+.nav {
+  height: 50px;
+  padding: 35px;
+  background: $nav-bg-color;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+
+  &__title {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-logo {
+      border-radius: 50%;
+    }
+
+    &-name {
+      margin-left: 1rem;
+    }
+  }
+
+  & > a {
+    background-color: $button-bg-color;
+    @include typographyStyle(1rem, normal, normal, $white);
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid $border-color;
+    padding: 0.7rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-color: $white;
+    }
+  }
+}

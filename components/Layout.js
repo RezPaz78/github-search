@@ -1,4 +1,3 @@
-import styles from "../styles/Layout.module.scss";
 import Nav from "./Nav";
 import Meta from "./Meta";
 
@@ -7,8 +6,8 @@ const Layout = ({ children }) => {
     <>
       <Meta  />
       <Nav />
-      <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
+      <div className="container">
+        <main>{children}</main>
       </div>
     </>
   );

@@ -1,7 +1,11 @@
 import SearchBox from "../components/SearchBox";
 
 const Home = () => {
-  return <SearchBox />;
+  return (
+    <>
+      <SearchBox />
+    </>
+  );
 };
 
 export default Home;
