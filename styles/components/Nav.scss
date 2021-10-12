@@ -6,31 +6,44 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2rem;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 
   &__title {
-    flex-basis: 50%;
+    flex-basis: 70%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 
     &-logo {
+      display: none;
       border-radius: 50%;
     }
 
     &-name {
       margin-left: 1rem;
+      @include typographyStyle(1rem, bold, normal, $white);
+      width: 100%;
+
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   & > a {
     background-color: $button-bg-color;
-    @include typographyStyle(1rem, normal, normal, $white);
+    @include typographyStyle(0.8rem, normal, normal, $white);
     padding: 0.5rem;
     border-radius: 6px;
     border: 1px solid $border-color;
     padding: 0.7rem;
     transition: all 0.2s ease-in-out;
+
+    @media (min-width: 768px) {
+        font-size: 1rem;
+      }
 
     &:hover {
       border-color: $white;
